@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="30dp"
+    android:gravity="center"
+    android:background="#FFFFFF">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="¡Bienvenido!\nConfigura tus finanzas para el próximo mes"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:textAlignment="center"
+        android:layout_marginBottom="40dp" />
+
+    <EditText
+        android:id="@+id/txtBancoA"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:backgroundTint="#4A7BFE"
+        android:background="#E8F0FF"
+        android:hint="Banco A (Uso Diario): $ 0.00"
+        android:inputType="numberDecimal"
+        android:padding="15dp"
+        android:textColor="#333333"
+        android:layout_marginBottom="20dp" />
+
+    <EditText
+        android:id="@+id/txtBancoB"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:backgroundTint="#4A7BFE"
+        android:background="#E8F0FF"
+        android:hint="Banco B (Ahorros): $ 0.00"
+        android:inputType="numberDecimal"
+        android:padding="15dp"
+        android:textColor="#333333"
+        android:layout_marginBottom="20dp" />
+
+    <EditText
+        android:id="@+id/txtEfectivo"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:backgroundTint="#4A7BFE"
+        android:background="#E8F0FF"
+        android:hint="Efectivo: $ 0.00"
+        android:inputType="numberDecimal"
+        android:padding="15dp"
+        android:textColor="#333333"
+        android:layout_marginBottom="40dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="¿Ya cuenta con un ahorro inicial guardado?"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="#555555"
+        android:textAlignment="center"
+        android:layout_marginBottom="20dp" />
+
+    <Button
+        android:id="@+id/btnIniciar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Iniciar Planificación"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:backgroundTint="#80FF80" />
+
+</LinearLayout>
