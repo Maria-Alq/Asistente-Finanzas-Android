@@ -40,6 +40,30 @@ public class MainActivity extends AppCompatActivity {
                     logica.configurarOnboardingInicial(saldoA, saldoB);
 
                     Toast.makeText(MainActivity.this, "¡Saldos iniciales guardados con éxito!", Toast.LENGTH_LONG).show();
+                    btnIniciar.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            try {
+                                String textoA = txtBancoA.getText().toString();
+                                String textoB = txtBancoB.getText().toString();
+
+                                double saldoA = textoA.isEmpty() ? 0 : Double.parseDouble(textoA);
+                                double saldoB = textoB.isEmpty() ? 0 : Double.parseDouble(textoB);
+
+                                logica.configurarOnboardingInicial(saldoA, saldoB);
+
+                                Toast.makeText(MainActivity.this, "¡Saldos iniciales guardados con éxito!", Toast.LENGTH_SHORT).show();
+
+                                // NUEVO: Código para viajar a la pantalla del Tablero
+                                android.content.Intent intencion = new android.content.Intent(MainActivity.this, DashboardActivity.class);
+                                startActivity(intencion);
+                                finish(); // Cierra la pantalla de Onboarding para que el usuario no pueda regresar a ella
+
+                            } catch (Exception e) {
+                                Toast.makeText(MainActivity.this, "Ocurrió un error al guardar", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
 
                 } catch (Exception e) {
                     Toast.makeText(MainActivity.this, "Ocurrió un error al guardar", Toast.LENGTH_SHORT).show();

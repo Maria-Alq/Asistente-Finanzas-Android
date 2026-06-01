@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="30dp"
+    android:background="#FFFFFF">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Registro Rápido"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:textAlignment="center"
+        android:layout_marginBottom="30dp"/>
+
+    <EditText
+        android:id="@+id/txtMontoTransaccion"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="Monto ($)"
+        android:inputType="numberDecimal"
+        android:backgroundTint="#4A7BFE"
+        android:padding="15dp"
+        android:layout_marginBottom="20dp" />
+
+    <RadioGroup
+        android:id="@+id/grupoTipoTransaccion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp">
+
+        <RadioButton
+            android:id="@+id/radioGasto"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Gasto (-)"
+            android:textSize="18sp"
+            android:textColor="#FF0000"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/radioIngreso"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Ingreso (+)"
+            android:textSize="18sp"
+            android:textColor="#00AA00"/>
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/txtIdCategoriaTransaccion"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="ID de la Categoría (Ej. 1 para Luz)"
+        android:inputType="number"
+        android:backgroundTint="#4A7BFE"
+        android:padding="15dp"
+        android:layout_marginBottom="40dp" />
+
+    <Button
+        android:id="@+id/btnGuardarTransaccion"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Registrar"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:backgroundTint="#80FF80" />
+
+</LinearLayout>
